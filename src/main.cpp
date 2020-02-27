@@ -72,7 +72,7 @@ void avg_key_only_vec_non_probabalistic_lookup(int n, double thresh) {
 
   int cross_point = (double)(size - 1) * thresh;
 
-  std::cout << "cross point - only searching below index : " << cross_point << '\n';
+//  std::cout << "cross point - only searching below index : " << cross_point << '\n';
 
   std::random_device rd; // obtain a random number from hardware
   std::mt19937 eng(rd()); // seed the generator
@@ -131,7 +131,7 @@ int main() {
   int lookup_size = test::num_to_key.size();
 
   // probabilistic vector based lookup controls
-  double thresh = .06;
+  double thresh = .05;
   int prob_lookup_found_in_first_thresh_places_in_vector = 80;
 
   if (true) // avg_map_lookup
